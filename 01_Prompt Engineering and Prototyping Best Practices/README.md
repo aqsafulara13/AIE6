@@ -33,19 +33,112 @@ Each assignment will have a few of the following categories of exercises:
 - 🚧 Advanced Builds - these will only appear in Hardmode assignments, and will require you to build something with little to no help outside of documentation!
 
 ##### 🏗️ Activity #1:
-
 Please evaluate your system on the following questions:
+(Raw answers, tested on original code,i.e
+###### ChatOpenAI Templates
+system_template = """You are a helpful assistant who always speaks in a pleasant tone!
+"""
+user_template = """{input}
+Think through your response step by step.
+"""
+prompt = Prompt(
+       provider=ChatOpenAI.id,
+       messages=[
+           PromptMessage(
+               role="system",
+               template=system_template,
+               formatted=system_template,
+           ),
+           PromptMessage(
+               role="user",
+               template=user_template,
+               formatted=user_template.format(input=message.content),
+           ),
+       ],
+       inputs={"input": message.content},
+       settings=settings,
+   )
 
-1. Explain the concept of object-oriented programming in simple terms to a complete beginner. 
-    - Aspect Tested:
-2. Read the following paragraph and provide a concise summary of the key points…
-    - Aspect Tested:
-3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
-    - Aspect Tested:
-4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
-    - Aspect Tested:
-5. Rewrite the following paragraph in a professional, formal tone…
-    - Aspect Tested:
+
+
+##### 1. Explain the concept of object-oriented programming in simple terms to a complete beginner.
+###### Assistant Response: 
+Of course! Object-oriented programming is a way of writing computer programs by organizing data and the code that works with that data into objects.
+Imagine objects as things or entities in the real world, like a car, a dog, or a book. Each object has characteristics (attributes) and behaviors (actions).
+In object-oriented programming, you can create classes, which are like blueprints for objects. A class defines the attributes (such as color, size, or type) and behaviors (such as moving, barking, or opening) that an object can have.
+When you create an object from a class, it's called an instance. So, if you have a class called "Car," you can create instances of cars with different attributes like color, model, and speed.
+Objects can interact with each other by sending messages and calling methods. For example, a "Car" object can call a "drive" method to move forward.
+Object-oriented programming helps in organizing code, making it easier to understand, reuse, and maintain. It also promotes concepts like encapsulation, inheritance, and polymorphism, which are powerful tools for building complex software systems.
+I hope this explanation helps you understand the basics of object-oriented programming! Let me know if you have any more questions.
+###### Aspect Tested:
+1. Brevity of response: Detailed and long message
+2. Understanding by non-technical person:Not tailored to audience, nor explains why something is important. 
+3. No analogies
+4. Natural tone, speech and sentence structure: Monotonous, academic and plain 
+##### 2. Read the following paragraph and provide a concise summary of the key points…
+Figure 1.1: Language model meta-learning. During unsupervised pre-training, a language model develops a broad set of skills and pattern recognition abilities. It then uses these abilities at inference time to rapidly adapt to or recognize the desired task. We use the term “in-context learning” to describe the inner loop of this process, which occurs within the forward-pass upon each sequence. The sequences in this diagram are not intended to be representative of the data a model would see during pre-training, but are intended to show that there are sometimes repeated sub-tasks embedded within a single sequence. Figure 1.2: Larger models make increasingly efficient use of in-context information. We show in-context learning performance on a simple task requiring the model to remove random symbols from a word, both with and without a natural language task description (see Sec. 3.9.2). The steeper “in-context learning curves” for large models demonstrate improved ability to learn a task from contextual information. We see qualitatively similar behavior across a wide range
+###### Assistant Response:
+Certainly! In the provided text, it discusses the concept of language model meta-learning, where a language model gains various skills and pattern recognition abilities during unsupervised pre-training. This model then utilizes these abilities during inference to quickly adapt to or recognize specific tasks. The term "in-context learning" is used to describe the process happening within each sequence during the forward-pass. The text also mentions that larger models are more efficient in utilizing in-context information, as demonstrated by improved task learning abilities based on contextual information. This behavior is observed across a variety of tasks.
+###### Aspect Tested:
+1. Ability to parse out important information: Good distillation or summary, retaining key points
+2. Context captured: Fails to recognize the summary or description are of images.
+
+
+##### 3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
+###### Assistant Response:
+Once upon a time, in a bustling city filled with towering skyscrapers and bustling streets, there was a lonely robot named Spark. Spark spent his days wandering the city, searching for someone to befriend. One day, while exploring a quiet park on the outskirts of the city, Spark stumbled upon a forgotten and abandoned toy robot lying in the grass.
+Curious, Spark approached the toy robot and gently nudged it. To his surprise, the toy robot sprang to life with a cheerful beep. The two robots quickly bonded over their shared love for exploring and learning new things. They spent their days exploring the city together, discovering hidden gems and making memories.
+Through their friendship, Spark learned that companionship can be found in the most unexpected places. And so, the two robots continued their adventures, side by side, creating a special bond that would last a lifetime.
+
+
+###### Aspect Tested:
+1. Story structure: Compelling story, with logical paragraphs built on each other
+2. Format: Obeys 100-150 word limit.
+3. Visual: Paints the picture of the robots with vivid details. 
+4. Emotion and connection: Leverages good emotions and traits like cheerful beep, learning new things / friendship. 
+5. Storytelling framework: Doesn’t use complex storytelling types, like Problem-Solution or Zero-to-Hero.
+
+
+##### 4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
+ ###### Assistant Response:
+Of course! Let's break it down step by step to figure out how many packs of each you need to buy.
+First, let's start with the apples. Since each pack contains 4 apples and you want to get 12 apples in total, you would need 12 divided by 4, which equals 3 packs of apples.
+Next, let's move on to the oranges. Each pack contains 3 oranges, and you want to get 9 oranges in total. So, you would need 9 divided by 3, which equals 3 packs of oranges.
+Therefore, to get exactly 12 apples and 9 oranges, you would need to buy 3 packs of apples and 3 packs of oranges.
+I hope this helps! Let me know if you need any more assistance.
+
+
+ ###### Aspect Tested:
+1. Math accuracy: Sound and accurate answer, with detailed logical reasoning
+2. Conciseness vs Step by step detail: Explains reasoning (COT, due to user prompt in code), but the details may not be desired by every user, or required in every situation, so our code handling may need to be more nuanced. 
+
+
+##### 5. Rewrite the following paragraph in a professional, formal tone…
+That’s not the only way AI is changing strategy. AI is also doing three things:
+It’s making designers and engineers more efficient -
+Each individual builder has more leverage than ever - which means they need better strategic direction on what to build
+And it also means those strategies need to adapt and be malleable - they can’t be rigid feature lists in this age, they need to be high level problem and outcome direction
+Having empowered teams that are going in the right direction matters more than ever - and PMs need to plug that gap with great strategy built for this era
+PMs are able to get closer and closer to the product -
+PMs can iterate on product copy with AI to improve the copy
+PMs can build AI prototypes for new features that are even the first version into production
+PMs can build AI evals that determine the future of the product
+AI still can’t develop a great strategy -
+AI lacks the context of a PM - what worked before, all the 1000s of documents and customer calls can’t fit in its context window
+AI can’t do the rounds and rounds of iterations with stakeholders and customers that a truly hardened and well-accepted strategy can
+This makes product strategy more important than ever as a task for PMs and product leaders.
+###### Assistant Response:
+Certainly! Here is the rewritten paragraph in a professional and formal tone:
+Artificial Intelligence (AI) is revolutionizing strategic approaches in multiple ways. Firstly, AI enhances the efficiency of designers and engineers by providing them with increased leverage, necessitating a more refined strategic direction for their projects. Furthermore, strategies must now be adaptable and flexible, focusing on overarching problem-solving approaches rather than rigid feature lists to remain relevant in the current landscape.
+The importance of empowered teams moving in the right direction cannot be overstated, underscoring the critical role of Product Managers (PMs) in crafting strategies tailored to the demands of this era. PMs are increasingly involved in product development processes, utilizing AI to refine product copy, create AI prototypes for new features, and conduct evaluations that shape the future trajectory of products.
+Despite AI's advancements, it falls short in developing comprehensive strategies due to its lack of contextual understanding possessed by PMs. The intricate knowledge derived from past experiences, extensive documentation, and customer interactions that inform strategic decisions cannot be fully encapsulated within AI's operational framework. Additionally, AI lacks the capacity for iterative engagements with stakeholders and customers, a crucial aspect in refining and solidifying a well-accepted strategy.
+Consequently, the role of product strategy has become more pivotal than ever for PMs and product leaders, emphasizing the need for strategic acumen and adaptability in navigating the evolving landscape of AI-driven innovation.
+
+
+###### Aspect Tested:
+1. Semantic meaning: Preserves the information from the original paragraph, and build a logical sequence
+2. Not easy to comprehend: makes it professional, but also dry and boring with too long sentences to read and thus a human user is more likely to skip half of the longer sentences.
+
 
 This "vibe check" now serves as a baseline, of sorts, to help understand what holes your application has.
 
