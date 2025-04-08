@@ -145,6 +145,7 @@ This "vibe check" now serves as a baseline, of sorts, to help understand what ho
 ##### 🚧 Advanced Build:
 
 Please make adjustments to your application that you believe will improve the vibe check done above, push the changes to your HF Space and redo the above vibe check.
+The updated advanced build with improved prompts are at https://huggingface.co/spaces/afulara/myfirstllm-app/blob/main/app.py
 
 > NOTE: You may reach for improving the model, changing the prompt, or any other method.
 
@@ -157,3 +158,9 @@ In essence, it's a first look to ensure your system isn't experiencing catastrop
 ##### 🧑‍🤝‍🧑❓ Discussion Question #1:
 
 What are some limitations of vibe checking as an evaluation tool?
+1) Highly subjective:  What one person interprets as a positive vibe, another might see as neutral or even negative. It's like trying to describe a color to someone who's never seen it before - open to interpretation.
+2) Varies from task to task: A math problem may have a different eval, than a literature task
+3) Actionable feedback: If someone's vibe is off, great, but what do you do next? It's like knowing your car is low on gas but not having a gas station in sight. Without clear steps for improvement, vibe checking can leave you feeling stuck.
+4) Not exhaustive: Vibe checking lacks specificity. It's like trying to measure the depth of the ocean with a teaspoon. Sure, you might get a general sense of things, but you're not getting the full picture. Without concrete data or specific criteria, it's hard to make accurate assessments. 
+
+So, while vibe checking can be a fun and informal way to get a sense of things, it's important to recognize its limitations and not rely on it as the sole method of evaluation. It's like using a spoon to eat soup - it works, but a fork or knife might be more effective in certain situations.
