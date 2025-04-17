@@ -33,6 +33,16 @@ You are tasked to create an agent with 3 tools that can research a specific doma
 
 You must deploy the resultant agent with a Chainlit (or Custom) frontend.
 
+## Homework
+How Does the Model Determine Which Tool to Use?
+Similar to any other model “decision” by generating tokens! Using the tools description + query the llm will make a decision if the user query could benefit from tool use.
+
+Is There a Limit to How Many Times We Can Cycle?
+25
+
+How Are Correct Answers Associated with Questions?
+If the answer contains the must mention keywords for a given question based on the list.
+
 ## Ship 🚢
 
 The completed notebook!
