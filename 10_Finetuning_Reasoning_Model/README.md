@@ -29,9 +29,11 @@ In today's assignment, we'll be fine-tuning Llama 3.1 8B to create a reasoning m
     
 The notebook Colab link is located [here](https://colab.research.google.com/drive/18jF-pOlz-cFt0SkHVQ_9PBuGAH0VumrG?usp=sharing)
 
+
 ## Ship 🚢
 
 The completed notebook!
+## You can find my ANSWER COLAB HERE: https://colab.research.google.com/gist/aqsafulara13/93514903dbbf8abfb3a6f64c6764b967/-aqsa-s-copy-ai-makerspace-unsloth-grpo-training.ipynb#scrollTo=qPxBo1od3eiy
 
 #### 🏗️ BONUS ACTIVITY (FULL MARKS IF COMPLETED IN LIEU OF ABOVE NOTEBOOK):
 
