@@ -24,10 +24,6 @@ The notebook Colab link is located [here](https://colab.research.google.com/driv
 
 The completed notebook!
 
-HOMEWORK SUBMISSION: 
-Github Gist: https://colab.research.google.com/gist/aqsafulara13/fb7047682814e26823020f7fd55b2e2c/aqsa-s-copy-of-fine_tuning_embedding_models_for_rag_notebook.ipynb
-Colab: https://colab.research.google.com/drive/1z717ffQe7hqba0URc7ZA_SqC177WtmJ7#scrollTo=jDgD8seY_I3W
-
 #### 🏗️ BONUS ACTIVITY (FULL MARKS IF COMPLETED IN LIEU OF ABOVE NOTEBOOK):
 
 Using your own source data (from multiple sources) fine-tune an embedding model by synthetically generating 100 question/context using the Ragas Knowledge Graph Approach.
