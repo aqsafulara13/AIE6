@@ -3,7 +3,8 @@ from collections import defaultdict
 from typing import List, Tuple, Callable
 from aimakerspace.openai_utils.embedding import EmbeddingModel
 import asyncio
-from file_utils import extract_text_from_file
+
+from aimakerspace.openai_utils.file_utils import extract_text_from_file
 
 
 
@@ -27,7 +28,7 @@ class VectorDatabase:
         self,
         query_vector: np.array,
         k: int,
-        distance_measure: Callable = cosine_similarity,git v
+        distance_measure: Callable = cosine_similarity,
     ) -> List[Tuple[str, float]]:
         scores = [
             (key, distance_measure(query_vector, vector))
